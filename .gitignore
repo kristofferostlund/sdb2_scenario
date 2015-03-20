@@ -1,0 +1,15 @@
+#Visual Studio files
+*.sln
+*.suo
+*.pyproj
+
+#IDEA files
+.idea
+.name
+compiler.xml
+encodings.xml
+misc.xml
+modules.xml
+sdb2_scenario.iml
+vcs.xml
+workspace.xml
