@@ -1,0 +1,15 @@
+This file contains a list of questions for you to answer.
+The same questions apply to each of the supplied files so you
+need to find 3 different sets of answers, one for each file.
+These questions are only for the student who's student number
+is the same as the name of this file.
+========================================
+
+
+Count the numbers that lie in the field [capacity] between ( 2880.8) and ( 3326.6) inclusive 
+(open's) are what percentage of the field [state]
+How many values in the 'code' field do not match the format 9!99{9X}XX   ?
+How many times does the least common string appear in the field [herb]
+Count the numbers that lie in the field [height] between (16) and (29) inclusive 
+Find the sum of the numbers in field [tonnes] between (7171) and (10478) inclusive 
+count the lines where capacity is more than 683.0 *or* height is less than 44
