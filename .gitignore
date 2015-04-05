@@ -1,3 +1,10 @@
+#Project folders
+depricated_files
+sandbox
+__pycache__
+programflow.md
+helpers
+
 #Visual Studio files
 *.sln
 *.suo

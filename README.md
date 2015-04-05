@@ -2,6 +2,26 @@
 #### Module: <b>Software Development for Business 2</b>
 #### Submission: 4 PM, Friday 15th of May 2015
 
+### Questions, sort of
+
+
+
+1. Count the numbers that lie in the field [capacity] between (2880.8) and (3326.6) inclusive.
+
+2. (open's) are what percentage of the field [state]?
+
+3. How many values in the 'code' field do not match the format 9!99{9X}XX?
+
+4. How many times does the least common string appear in the field [herb]?
+
+5. Count the numbers that lie in the field [height] between (16) and (29) inclusive.
+
+6. Find the sum of the numbers in field [tonnes] between (7171) and (10478) inclusive.
+
+7. Count the lines where capacity is more than 683.0 *or* height is less than 44?
+
+---
+
 ### Stages
 
 1. Write Python code to answer your questions. The user should be able to enter the file name and the program should then display the answers to your questions. (Preferably only reading the whole file once).
@@ -22,7 +42,7 @@ Your submission should have:
 * Your source code (annotated) from each stage of your development.
 * Evidence of your program running at each stage, with written commentary (<em>that can be hand written</em>)
 * Your research report.
-* AN evaluation of what you have achieved and the problems you found.
+* An evaluation of what you have achieved and the problems you found.
 * Your work held in a flat binder or plastic sleeve. (Not ring bound)
 
 ### Submission
