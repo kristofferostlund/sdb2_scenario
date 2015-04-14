@@ -19,10 +19,10 @@ class Questions(object):
         self.keys = [key for key in self.dic] if type(dic) is dict or type(dic) is OrderedDict else []
 
     def get_ans_1(self):
-        """Returns an integer holding the number of fields from dic['capacity'] where the value of the fields are between 2880.8 and 3326.6."""
+        """Returns an integer holding the number of fields from dic['capacity'] where the value of the fields are between 2880.8 and 3326.6 (inclusive)."""
         if 'capacity' not in self.keys:
             return -1
-        return len([x for x in self.dic['capacity'] if x > 2880.8 and x < 3326.6])
+        return len([x for x in self.dic['capacity'] if 2880.8 <= x and x <= 3326.6])
 
     def get_ans_2(self):
         """Returns a string holding the percentage of fields which are open in dic['state']."""
@@ -40,19 +40,19 @@ class Questions(object):
         """Returns an integer holding the amout of times the least common string in dic['herb'] appears."""
         if 'herb' not in self.keys:
             return -1
-        return min(Counter(self.dic['herb']), key=Counter(self.dic['herb']).get)
+        return Counter(self.dic['herb'])[min(Counter(self.dic['herb']), key=Counter(self.dic['herb']).get)]
 
     def get_ans_5(self):
-        """Returns an integer holding the amount of numbers which are between 16 and 29 in dic['height']"""
+        """Returns an integer holding the amount of numbers which are between 16 and 29 in dic['height'] (inclusive)"""
         if 'height' not in self.keys:
             return -1
-        return len([x for x in self.dic['height'] if 16 < x and x < 29])
+        return len([x for x in self.dic['height'] if 16 <= x and x <= 29])
 
     def get_ans_6(self):
-        """Returns an integer holding the sum of the numbers between 7171 and 10478 in dic['tonnes']"""
+        """Returns an integer holding the sum of the numbers between 7171 and 10478 in dic['tonnes'] (inclusive)"""
         if 'tonnes' not in self.keys:
             return -1
-        return sum([x for x in self.dic['tonnes'] if 7171 < x and x < 10478])
+        return sum([x for x in self.dic['tonnes'] if 7171 <= x and x <= 10478])
 
     def get_ans_7(self):
         """Returns an integer holding the amount of numbers where dic['height'] is less than 44 *or* dic['capacity'] is more than 683.0."""

@@ -21,6 +21,7 @@ class CsvFile(object):
         self.path = ''
         self.raw = ''
         self.coloumns = OrderedDict()
+        self.iscorrect = False
 
     @classmethod
     def init_by(cls, path):
@@ -34,6 +35,7 @@ class CsvFile(object):
         obj.raw = obj.try_get_raw_file_content(obj.path)
         obj.coloumns = obj.create_ordered_dictionary_from(obj.raw)
         obj.coloumns = obj.try_cast_coloumns(obj.coloumns)
+        obj.iscorrect = obj.check_is_correct(obj.coloumns)
         return obj
 
     def try_get_raw_file_content(self, path):
@@ -47,7 +49,7 @@ class CsvFile(object):
             return ''
 
     def get_list_by_newline_from(self, content):
-        """Returns a list of every non-empty line of content"""
+        """Returns a list of every non-empty line of *content*"""
         return [line for line in content.split('\n') if len(line) > 0]
 
     def create_ordered_dictionary_from(self, raw):
@@ -77,3 +79,16 @@ class CsvFile(object):
                 pass
 
         return coloumns
+
+    def check_is_correct(self, coloumns):
+        """Checks whether file correctly formatted and returns a boolean value.
+        I.E. has the following fields and at least one row with each coloumn:
+        capacity, state, code, herb, height, tonnes"""
+        requiredfields = [ 'capacity', 'state', 'code', 'herb', 'height', 'tonnes' ]
+        if len(coloumns) < 1 or len(coloumns) != len(requiredfields):
+            return False
+        for field in requiredfields:
+            if field not in coloumns.keys():
+                return False
+
+        return True
