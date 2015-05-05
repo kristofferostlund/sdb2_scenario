@@ -23,7 +23,7 @@ def display_answers(questions, file):
     print('\n---- Answers ----\n')
     print('- Answer 1: There are {} entries with a capacity between 2880.0 (units) and 3326.6 (units) (inclusive)\n'.format(questions.get_ans_1()))
     print('- Answer 2: {} of entries state is set to open.\n'.format(questions.get_ans_2()))
-    print(''.join(['- Answer 3: There are {} entries which does not match the code '.format(questions.get_ans_3()), '9!99{9X}XX\n']))
+    print(''.join(['- Answer 3: There are {} entries which does not match the format '.format(questions.get_ans_3()), '9!99{9X}XX\n']))
     print('- Answer 4: The least common herb appears {} times.\n'.format(questions.get_ans_4()))
     print('- Answer 5: There are {} entries which has a height of at least 16 (units) and maximum 29 (units) (inclusive)\n'.format(questions.get_ans_5()))
     print('- Answer 6: There are {} entries weighing at least 7171 tonnes and maximum 10478 tones (inclusive)\n'.format(questions.get_ans_6()))

@@ -4,6 +4,7 @@
 # Copyright (C) 2015 Kristoffer Ostlund. All rights reserved.
 
 from collections import OrderedDict, Counter
+from helpers import stringformathelper as SFormat
 
 class Questions(object):
     """Class for answering questions. QuestionAnswerers has the following property:
@@ -34,7 +35,7 @@ class Questions(object):
         """Returns an integer holding the value of how many fields which aren't 9!99{9X}XX in dic['code']"""
         if 'code' not in self.keys:
             return -1
-        return len([x for x in self.dic['code'] if x != '9!99{9X}XX'])
+        return len([x for x in self.dic['code'] if not SFormat.matches(x,'9!99{9X}XX')])
 
     def get_ans_4(self):
         """Returns an integer holding the amout of times the least common string in dic['herb'] appears."""
