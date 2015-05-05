@@ -22,6 +22,13 @@
 
 ---
 
+### Finished
+
+#### [Stage 1 and 2 can be found here](https://github.com/kristofferostlund/sdb2_scenario/tree/f86402f070a195f5cc22b2a69f0c46b8d62cc946)
+
+
+---
+
 ### Stages
 
 1. Write Python code to answer your questions. The user should be able to enter the file name and the program should then display the answers to your questions. (Preferably only reading the whole file once).
