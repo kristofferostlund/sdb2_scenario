@@ -2,9 +2,14 @@
 #### Module: <b>Software Development for Business 2</b>
 #### Submission: 4 PM, Friday 15th of May 2015
 
+---
+
+### Finished
+
+#### [Stage 1 and 2 can be found here](https://github.com/kristofferostlund/sdb2_scenario/tree/f86402f070a195f5cc22b2a69f0c46b8d62cc946)
+
+---
 ### Questions, sort of
-
-
 
 1. Count the numbers that lie in the field [capacity] between (2880.8) and (3326.6) inclusive.
 
@@ -19,13 +24,6 @@
 6. Find the sum of the numbers in field [tonnes] between (7171) and (10478) inclusive.
 
 7. Count the lines where capacity is more than 683.0 *or* height is less than 44?
-
----
-
-### Finished
-
-#### [Stage 1 and 2 can be found here](https://github.com/kristofferostlund/sdb2_scenario/tree/f86402f070a195f5cc22b2a69f0c46b8d62cc946)
-
 
 ---
 
