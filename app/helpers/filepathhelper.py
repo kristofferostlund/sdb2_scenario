@@ -22,6 +22,16 @@ def get_os_path(originalpath):
         path = str_insert_after(path, '\\', ':')
     return path
 
+def str_insert_after(originalstr, addstr, findstr):
+    """Inserts *addstr* to *originalstr* after *findstr* if *findstr* is in the file.
+    If it's not, it appends *addstr* onto *originalstr* and returns it."""
+    index = originalstr.find(findstr)
+    if index == -1:
+        return ''.join([originalstr, addstr])
+
+    index += 1 # inserts are made after *findstr*
+    return ''.join([originalstr[:index], addstr, originalstr[index:]])
+
 def ensure_reletional_path(callerpath, filepath):
     """Combines and returns the relative from the path of the calling folder to the path of the file. Used to ensure a file can be run from any folder in the project."""
     return os.path.join(callerpath, get_os_path(filepath))
@@ -70,14 +80,3 @@ def get_scenario_path_by_name(userinput):
         userinput = str_insert_after(userinput, '.csv', '.csv')
     userInputArr = [x for x in scenariofiles if x.endswith(userinput)]
     return userInputArr[0] if len(userInputArr) > 0 else ''
-
-
-def str_insert_after(originalstr, addstr, findstr):
-    """Inserts *addstr* to *originalstr* after *findstr* if *findstr* is in the file.
-    If it's not, it appends *addstr* onto *originalstr* and returns it."""
-    index = originalstr.find(findstr)
-    if index == -1:
-        return ''.join([originalstr, addstr])
-
-    index += 1 # inserts are made after *findstr*
-    return ''.join([originalstr[:index], addstr, originalstr[index:]])

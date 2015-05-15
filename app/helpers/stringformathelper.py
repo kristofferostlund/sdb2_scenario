@@ -13,8 +13,8 @@ def matches(item, source):
     # If a match is found, it goes to the next character.
     for i in range(0, len(source)):
         # Checks if the characters both are either '{' or '}'.
-        if (item[i] is '{' or item[i] is '}') and item[i] is source[i]:
-            continue
+        if (item[i] is '{' or item[i] is '}') and item[i] is not source[i]:
+            return False
         # Checks if both characters are digits
         if item[i].isdigit() and source[i].isdigit():
             continue
@@ -30,3 +30,7 @@ def matches(item, source):
 
     # If all the characters were matching, it's obviously matching.
     return True
+
+print(matches('{', '}'))
+print('{' is '}')
+print(('{' is '{' or '{' is '}') and '{' is '}')
