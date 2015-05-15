@@ -33,11 +33,24 @@ def get_file_path_from_user_input():
     print('Input one of the following:\n- letter for the file (a, b or c),\n- the filename (e.g. 3328505a or 3328505b.csv) or\n- the complete file path.')
     userinput = input('Letter, filename or filepath: ')
 
-    if userinput in [ 'a', 'b', 'c']:
-        return combine_relational_path_and_letter(userinput)
+    return get_file_by(userinput)
 
-    scenariofile = get_scenario_path_by_name(userinput)
-    return scenariofile if scenariofile != '' else get_os_path(userinput)
+def get_file_by(userInput):
+    """Takes a string in the form of either just the assignment letter, the assignment filename including file extension, assignment filename excluding exteinsion and the full filepath.
+    Returns a clean version to the path depending on input."""
+
+
+    if userInput is '':
+        return ''
+
+    if userInput in [ 'a', 'b', 'c' ]:
+        return combine_relational_path_and_letter(userInput)
+
+
+    print(get_scenario_path_by_name(userInput))
+
+    scenariofile = get_scenario_path_by_name(userInput)
+    return scenariofile if scenariofile != '' else get_os_path(userInput)
 
 def combine_relational_path_and_letter(letter):
     """Returns the relational path to the scenariofile of *letter* (a, b or c) or whatevr is input."""

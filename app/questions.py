@@ -4,7 +4,7 @@
 # Copyright (C) 2015 Kristoffer Ostlund. All rights reserved.
 
 from collections import OrderedDict, Counter
-from helpers import stringformathelper as SFormat
+from .helpers import stringformathelper as SFormat
 
 class Questions(object):
     """Class for answering questions. QuestionAnswerers has the following property:
@@ -63,3 +63,14 @@ class Questions(object):
         for i in range(0, len(self.dic['height'])):
             number += 1 if self.dic['height'][i] < 44 or self.dic['capacity'][i] > 683.0 else 0
         return number
+
+    def get_list_of_answers_and_strings(self):
+        arr = [ ]
+        arr.append('- Answer 1: There are {} entries with a capacity between 2880.0 (units) and 3326.6 (units) (inclusive)\n'.format(self.get_ans_1()))
+        arr.append('- Answer 2: {} of entries state is set to open.\n'.format(self.get_ans_2()))
+        arr.append(''.join(['- Answer 3: There are {} entries which does not match the format '.format(self.get_ans_3()), '9!99{9X}XX\n']))
+        arr.append('- Answer 4: The least common herb appears {} times.\n'.format(self.get_ans_4()))
+        arr.append('- Answer 5: There are {} entries which has a height of at least 16 (units) and maximum 29 (units) (inclusive)\n'.format(self.get_ans_5()))
+        arr.append('- Answer 6: There are {} entries weighing at least 7171 tonnes and maximum 10478 tones (inclusive)\n'.format(self.get_ans_6()))
+        arr.append('- Answer 7: There are {} entries whch has a capacity of more than 683.0 (units) or less than 44 (units)\n'.format(self.get_ans_7()))
+        return arr
