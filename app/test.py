@@ -3,6 +3,9 @@
 # Git Repo: https://github.com/kristofferostlund/sdb2_scenario
 # Copyright (C) 2015 Kristoffer Ostlund. All rights reserved.
 
+# This file was added after writing the research portion of the assignment
+# Had this been actual live code, I would have tested much more, but this serves as an example of understandment.
+
 import unittest
 
 from helpers import stringformathelper as SFormat
