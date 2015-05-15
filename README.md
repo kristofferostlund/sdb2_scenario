@@ -8,6 +8,8 @@
 
 #### [Stage 1 and 2 can be found here](https://github.com/kristofferostlund/sdb2_scenario/tree/f86402f070a195f5cc22b2a69f0c46b8d62cc946)
 
+#### [Stage 3 can be found here](https://github.com/kristofferostlund/sdb2_scenario/tree/bdcf3a0b2f8a152736e01872f48644e214b8356c)
+
 ---
 ### Questions, sort of
 
